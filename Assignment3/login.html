@@ -1,0 +1,108 @@
+<head>
+    <meta name="viewport" content="device-width", initial-scale="1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <style>
+
+body{
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  background: url(https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/12/Gradient_builder_2.jpg?auto=format&q=60&w=1815&h=1815&fit=crop&crop=faces);
+  background-size: cover;
+}
+.card{
+  background: rgba( 255, 255, 255, 0.25 );
+  backdrop-filter: blur(15px);
+  padding: 20px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  box-shadow: 0 8px 32px 0 rgba( 0, 0, , 0.37 );
+}
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+form li + li{
+  margin-top: 1em;
+}
+label{
+  display: inline-block;
+  width: 90px;
+  text-align: left;
+  padding-right: 2px;
+}
+input{
+  border: 1px none;
+  font-size: 1em;
+  width: 300px;
+  padding: 6px;
+  border-radius: 4px;
+}
+.button{
+  padding-left: 95px;
+}
+button{
+  background-color: red;
+  color: white;
+  border: 1px none;
+  padding: 12px;
+  border-radius: 10px;
+}
+::selection{
+  background: red;
+}
+.card img{
+  width: 230px;
+  height: 254px;
+  position: absolute;
+  left: 100%;
+  top: -0.3%;
+  filter: saturate(200%);
+}
+    </style>
+    
+
+
+</head>
+  
+ <script>
+
+  function calls(){
+  var u =document.getElementById("user_name'").value;
+
+  var p=document.getElementById("user_password").value;
+  
+  alert(u+p);
+  return false;
+  }
+
+ </script>
+
+    <body>
+        
+    
+    <div class='card'>
+      <h1>Sign-in to take a test</h1>
+      <form action='./index.html' onsubmit="return calls()" method="">
+        <ul>
+          <li>
+            <label for='user_name'>Username</label>
+            <input type='text' id='user_name' name='user-name' required>
+          </li>
+          <li>
+            <label for='user_password'>Password</label>
+            <input type='password' id='user_password' name='user-password' min=8 max=15 required>
+          </li>
+          <li class="button">
+            <button type="submit" ><b>Login</b></button>
+          </li>
+        </ul>
+      </form>
+      <img src='https://images.cdn4.stockunlimited.net/clipart450/hello-comic-wording_1606466.jpg'alt='hello'>
+    </div>
+
+</body>

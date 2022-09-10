@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-based student feedback system</title>
+    <link rel="stylesheet" href="./style.css">
+    
+    
+    <h2 style="text-align: center;" >Web-based Student Feedback System</h2> 
+</head>
+<body id="body">
+     <script src="./script.js"> </script>
+
+     <div id="div2" class="maindiv">
+   
+          <h3>STUDENT LOGIN</h3> <br><br>
+          <p>Username</p>  
+          <input type="text" minlength="7" id="Suname" name="Susername" value="" placeholder="       Your register number" required autocomplete="off"> <br><br>
+          <p>Password</p>   
+          <input type="text" minlength="7" id="Spwd" name="Spassword" placeholder="      Your password" value="" required autocomplete="off"><br><br><br><br>
+          <input type="radio" id="year" name="year" value="2" required> <span style="color: rgb(215 123 29);">2nd year</span>
+          <input type="radio" id="year" name="year" value="3" required> <span style="color: rgb(215 123 29);">3rd year</span> <br><br>
+          <input  type="button" class="open1"  value="LOGIN"  onclick="call1()">
+          
+        </div>
+
+
+  <div id="div1" class="maindiv">
+      
+     <h3>ADMIN LOGIN</h3> <br><br>
+     <p>Username</p>  
+     <input type="text" minlength="7" id="uname" name="Ausername" value="" required autocomplete="off"> <br><br>
+     <p>Password</p>   
+     <input type="password" minlength="7" id="pwd" name="Apassword" value="" required autocomplete="off">  <br><br><br><br>
+     
+     <input  type="button" class="open1"  value="LOGIN" onclick="cal()">
+      
+   </div>
+
+   <div id="wastediv" style="display: none;">
+ 
+         <center><h3>Welcome Mam!!</h3> </center><br><br>
+      <form  action="https://stark-anchorage-19293.herokuapp.com/display" method="get">
+          <input type="number" name="Ayear" style="display: none;"  id="Ayear" value="" >
+          <input style="width: 130px;height:38px;" type="submit" value="Overall results">
+      </form><br><br><br>
+      <form  action="https://stark-anchorage-19293.herokuapp.com/add-display" method="get">
+          <input type="number" name="Ayear" style="display: none;"  id="Ayears" value="" >
+          <input style="width: 130px;height:38px;" type="submit" value="Category results">
+      </form>
+     </div>
+
+   
+
+
+
+
+
+  
+    <div id="sub1" class="div"  > 
+       <h4>NUMERICAL METHODS AND LINEAR PROGRAMMING PROBLEM</h4> <br>
+       <h4>18MA401</h4> <br>
+       <h4>Prof.G. Sivanesan</h4>
+       <input class="open1" type="button" value="OPEN" onclick="subcall(1)">
+    </div>
+   
+     
+    
+    <div id="sub2" class="div"> 
+        <h4>COMPUTER NETWORKS</h4> <br><br>
+        <h4>18CS401</h4> <br>
+        <h4>Prof.P. Tharani</h4>
+        <input class="open1" type="button" value="OPEN" onclick="subcall(2)">
+    </div> 
+    
+ 
+
+
+     <div id="sub3" class="div"> 
+         <h4>DESIGN AND ANALYSIS OF ALGORITHMS</h4> <br>
+         <h4>18CS402</h4> <br>
+         <h4>Prof.S. Ruba</h4>
+         <input class="open1" type="button" value="OPEN" onclick="subcall(3)">
+     </div> 
+     
+
+     
+     <div id="sub4" class="div"> 
+          <h4>OBJECT ORIENTED PROGRAMMING C++</h4> <br>
+          <h4>18CS403</h4> <br>
+          <h4>Prof.P. Nithya</h4>
+          <input class="open1" type="button" value="OPEN" onclick="subcall(4)">
+     </div>
+     
+
+     
+     <div id="sub5" class="div"> 
+          <h4>SOFTWARE ENGINEERING</h4> <br><br>
+          <h4>18CS404</h4> <br>
+          <h4>Prof.K. Saraswathi</h4>
+          <input class="open1" type="button" value="OPEN" onclick="subcall(5)">
+     </div> 
+
+
+
+
+     <div id="sub6" class="div"> 
+          <h4>MICROPROCESSORS AND MICROCONTROLLERS</h4> <br>
+          <h4>18CS405</h4> <br>
+          <h4>Prof.V. Manikantan</h4>
+          <input class="open1" type="button" value="OPEN" onclick="subcall(6)">
+     </div>
+     
+
+
+ 
+
+     <div id="sub1" class="siv" > 
+          <h4>PRINCIPLES OF COMPILER DESIGN</h4> <br>
+          <h4>18CS601</h4> <br>
+          <h4>Prof.K. Manimala</h4>
+          <input class="open1" type="button" value="OPEN" onclick="subcall(1)">
+         </div>
+
+     <div id="sub2" class="siv"> 
+          <h4>WEB TECHNOLOGY</h4> <br>  <br>
+          <h4>18CS602</h4> <br>
+          <h4>Dr.C. Rani</h4>
+          <input class="open1" type="button" value="OPEN" onclick="subcall(2)">
+         </div>
+
+     <div id="sub3" class="siv"> 
+          <h4>ARTIFICIAL INTELLIGENCE / PYTHON PROGRAMMING</h4> <br>
+          <h4>18CSPE602/ 18CSPE604</h4> <br>
+          <h4>Prof.V. Manikandan /   Prof.K. Saraswathi</h4>
+          <input type="radio" id="elective" name="elective" value="AI" required> <span style="color: rgb(215 123 29);">AI</span>
+          <input type="radio" id="elective" name="elective" value="PY" required> <span style="color: rgb(215 123 29);">Python</span> <br><br>
+          <input class="open1" type="button" value="OPEN" onclick="subcall(3)">
+      </div> 
+  
+
+     <div id="sub4" class="siv"> 
+          <h4>COMPUTER HARDWARE AND TROUBLESHOOTING</h4> <br>
+          <h4>18CSPE609</h4> <br>
+          <h4>Prof.N.D. Sukirtha Priya</h4>
+          <input class="open1" type="button" value="OPEN" onclick="subcall(4)">
+     </div>
+
+
+     <div id="sub5" class="siv"> 
+          <h4>BASICS OF INTERNET OF THINGS</h4> <br>
+          <h4>18ECOE06</h4> <br>
+          <h4>Prof.D. Manibharathi</h4>
+          <input class="open1" type="button" value="OPEN" onclick="subcall(5)">
+     </div> 
+
+     <div id="sub6" class="siv"> 
+          <h4>MOBILE COMPUTING</h4> <br>
+          <h4>18CSPE804</h4> <br>
+          <h4>Prof.K. Manimala</h4>
+          <input class="open1" type="button" value="OPEN" onclick="subcall(6)">
+     </div>
+
+
+
+
+
+
+
+
+
+
+
+     <div id="commondiv" style="display: none;">
+     
+     <p>1. Teacher comes to the class in time.</p>
+     <input type="button" class="option" id="11b"  value="Excellent" onclick="fillanswer('1','4',this)">
+     <input type="button" class="option" id="12b"  value="VeryGood" onclick="fillanswer('1','5',this)">
+     <input type="button" class="option" id="13b"  value="Good" onclick="fillanswer('1','3',this)">
+     <input type="button" class="option" id="14b"  value="Satisfaction" onclick="fillanswer('1','2',this)">
+     <input type="button" class="option" id="15b"  value="Poor" onclick="fillanswer('1','1',this)"> <br>
+    
+     <p>2. Teacher comes well prepared in the subject.</p>
+     <input type="button" class="option" id="21b"  value="Excellent" onclick="fillanswer('2','4',this)">
+     <input type="button" class="option" id="22b"  value="VeryGood" onclick="fillanswer('2','5',this)">
+     <input type="button" class="option" id="23b"  value="Good" onclick="fillanswer('2','3',this)">
+     <input type="button" class="option" id="24b"  value="Satisfaction" onclick="fillanswer('2','2',this)">
+     <input type="button" class="option" id="25b"  value="Poor" onclick="fillanswer('2','1',this)"> <br>
+
+
+     <p>3. Aims/Objectives of the lesson are made clear</p>
+     <input type="button" class="option" id="31b"  value="Excellent" onclick="fillanswer('3','4',this)">
+     <input type="button" class="option" id="32b"  value="VeryGood" onclick="fillanswer('3','5',this)">
+     <input type="button" class="option" id="33b"  value="Good" onclick="fillanswer('3','3',this)">
+     <input type="button" class="option" id="34b"  value="Satisfaction" onclick="fillanswer('3','2',this)">
+     <input type="button" class="option" id="35b"  value="Poor" onclick="fillanswer('3','1',this)"> <br>
+
+     <p>4. The lession is organised and presented clearly</p>
+     <input type="button" class="option" id="41b"  value="Excellent" onclick="fillanswer('4','4',this)">
+     <input type="button" class="option" id="42b"  value="VeryGood" onclick="fillanswer('4','5',this)">
+     <input type="button" class="option" id="43b"  value="Good" onclick="fillanswer('4','3',this)">
+     <input type="button" class="option" id="44b"  value="Satisfaction" onclick="fillanswer('4','2',this)">
+     <input type="button" class="option" id="45b"  value="Poor" onclick="fillanswer('4','1',this)"> <br>
+
+     <p>5. Teacher plans and prepares course materials and addional informations</p>
+     <input type="button" class="option" id="51b"  value="Excellent" onclick="fillanswer('5','4',this)">
+     <input type="button" class="option" id="52b"  value="VeryGood" onclick="fillanswer('5','5',this)">
+     <input type="button" class="option" id="53b"  value="Good" onclick="fillanswer('5','3',this)">
+     <input type="button" class="option" id="54b"  value="Satisfaction" onclick="fillanswer('5','2',this)">
+     <input type="button" class="option" id="55b"  value="Poor" onclick="fillanswer('5','1',this)"> <br>
+
+     <p>6. Teacher speaks clearly and audibly</p>
+     <input type="button" class="option" id="61b"  value="Excellent" onclick="fillanswer('6','4',this)">
+     <input type="button" class="option" id="62b"  value="VeryGood" onclick="fillanswer('6','5',this)">
+     <input type="button" class="option" id="63b"  value="Good" onclick="fillanswer('6','3',this)">
+     <input type="button" class="option" id="64b"  value="Satisfaction" onclick="fillanswer('6','2',this)">
+     <input type="button" class="option" id="65b"  value="Poor" onclick="fillanswer('6','1',this)"> <br>
+
+     <p>7. Teacher writed and draws legibly</p>
+     <input type="button" class="option" id="71b"  value="Excellent" onclick="fillanswer('7','4',this)">
+     <input type="button" class="option" id="72b"  value="VeryGood" onclick="fillanswer('7','5',this)">
+     <input type="button" class="option" id="73b"  value="Good" onclick="fillanswer('7','3',this)">
+     <input type="button" class="option" id="74b"  value="Satisfaction" onclick="fillanswer('7','2',this)">
+     <input type="button" class="option" id="75b"  value="Poor" onclick="fillanswer('7','1',this)"> <br>
+
+     <p>8. Teacher provides examples of concepts/ explanations are clear and effective</p>
+     <input type="button" class="option" id="81b"  value="Excellent" onclick="fillanswer('8','4',this)">
+     <input type="button" class="option" id="82b"  value="VeryGood" onclick="fillanswer('8','5',this)">
+     <input type="button" class="option" id="83b"  value="Good" onclick="fillanswer('8','3',this)">
+     <input type="button" class="option" id="84b"  value="Satisfaction" onclick="fillanswer('8','2',this)">
+     <input type="button" class="option" id="85b"  value="Poor" onclick="fillanswer('8','1',this)"> <br>
+
+     <p>9. Teacher's pace and level of instruction are suited to the needs of the students</p>
+     <input type="button" class="option" id="91b"  value="Excellent" onclick="fillanswer('9','4',this)">
+     <input type="button" class="option" id="92b"  value="VeryGood" onclick="fillanswer('9','5',this)">
+     <input type="button" class="option" id="93b"  value="Good" onclick="fillanswer('9','3',this)">
+     <input type="button" class="option" id="94b"  value="Satisfaction" onclick="fillanswer('9','2',this)">
+     <input type="button" class="option" id="95b"  value="Poor" onclick="fillanswer('9','1',this)"> <br>
+
+     <p>10. Teacher offers assistance and counselling to the needy students</p>
+     <input type="button" class="option" id="101b"  value="Excellent" onclick="fillanswer('10','4',this)">
+     <input type="button" class="option" id="102b"  value="VeryGood" onclick="fillanswer('10','5',this)">
+     <input type="button" class="option" id="103b"  value="Good" onclick="fillanswer('10','3',this)">
+     <input type="button" class="option" id="104b"  value="Satisfaction" onclick="fillanswer('10','2',this)">
+     <input type="button" class="option" id="105b"  value="Poor" onclick="fillanswer('10','1',this)"> <br>
+
+     <p>11. Teacher asks questions to promote interaction and reflective thinking</p>
+     <input type="button" class="option" id="111b"  value="Excellent" onclick="fillanswer('11','4',this)">
+     <input type="button" class="option" id="112b"  value="VeryGood" onclick="fillanswer('11','5',this)">
+     <input type="button" class="option" id="113b"  value="Good" onclick="fillanswer('11','3',this)">
+     <input type="button" class="option" id="114b"  value="Satisfaction" onclick="fillanswer('11','2',this)">
+     <input type="button" class="option" id="115b"  value="Poor" onclick="fillanswer('11','1',this)"> <br>
+
+     <p>12. Teacher encourages questioning/ raising doubts by students and answer them well</p>
+     <input type="button" class="option" id="121b"  value="Excellent" onclick="fillanswer('12','4',this)">
+     <input type="button" class="option" id="122b"  value="VeryGood" onclick="fillanswer('12','5',this)">
+     <input type="button" class="option" id="123b"  value="Good" onclick="fillanswer('12','3',this)">
+     <input type="button" class="option" id="124b"  value="Satisfaction" onclick="fillanswer('12','2',this)">
+     <input type="button" class="option" id="125b"  value="Poor" onclick="fillanswer('12','1',this)"> <br>
+
+     <p>13. Teacher ensures learner activity and problems solving ability in the class</p>
+     <input type="button" class="option" id="131b"  value="Excellent" onclick="fillanswer('13','4',this)">
+     <input type="button" class="option" id="132b"  value="VeryGood" onclick="fillanswer('13','5',this)">
+     <input type="button" class="option" id="133b"  value="Good" onclick="fillanswer('13','3',this)">
+     <input type="button" class="option" id="134b"  value="Satisfaction" onclick="fillanswer('13','2',this)">
+     <input type="button" class="option" id="135b"  value="Poor" onclick="fillanswer('13','1',this)"> <br>
+
+     <p>14. Teacher encourages, complements and praises originality and creativity displayed by the student</p>
+     <input type="button" class="option" id="141b"  value="Excellent" onclick="fillanswer('14','4',this)">
+     <input type="button" class="option" id="142b"  value="VeryGood" onclick="fillanswer('14','5',this)">
+     <input type="button" class="option" id="143b"  value="Good" onclick="fillanswer('14','3',this)">
+     <input type="button" class="option" id="144b"  value="Satisfaction" onclick="fillanswer('14','2',this)">
+     <input type="button" class="option" id="145b"  value="Poor" onclick="fillanswer('14','1',this)"> <br>
+
+
+     <p>15. Teacher gives interesting assignments that motivate students to seek knowledge and sharpen skills</p>
+     <input type="button" class="option" id="151b"  value="Excellent" onclick="fillanswer('15','4',this)">
+     <input type="button" class="option" id="152b"  value="VeryGood" onclick="fillanswer('15','5',this)">
+     <input type="button" class="option" id="153b"  value="Good" onclick="fillanswer('15','3',this)">
+     <input type="button" class="option" id="154b"  value="Satisfaction" onclick="fillanswer('15','2',this)">
+     <input type="button" class="option" id="155b"  value="Poor" onclick="fillanswer('15','1',this)"> <br>
+
+     <p>16. Teacher engages classes regularly and maintains discipline</p>
+     <input type="button" class="option" id="161b"  value="Excellent" onclick="fillanswer('16','4',this)">
+     <input type="button" class="option" id="162b"  value="VeryGood" onclick="fillanswer('16','5',this)">
+     <input type="button" class="option" id="163b"  value="Good" onclick="fillanswer('16','3',this)">
+     <input type="button" class="option" id="164b"  value="Satisfaction" onclick="fillanswer('16','2',this)">
+     <input type="button" class="option" id="165b"  value="Poor" onclick="fillanswer('16','1',this)"> <br>
+
+     <p>17. Teacher covers the syllabus completely and at an appropriate pace</p>
+     <input type="button" class="option" id="171b"  value="Excellent" onclick="fillanswer('17','4',this)">
+     <input type="button" class="option" id="172b"  value="VeryGood" onclick="fillanswer('17','5',this)">
+     <input type="button" class="option" id="173b"  value="Good" onclick="fillanswer('17','3',this)">
+     <input type="button" class="option" id="174b"  value="Satisfaction" onclick="fillanswer('17','2',this)">
+     <input type="button" class="option" id="175b"  value="Poor" onclick="fillanswer('17','1',this)"> <br>
+
+     <p>18. Teacher holds tests regularly which are helpful in building up confidence in their acquisition and application of knowledge</p>
+     <input type="button" class="option" id="181b"  value="Excellent" onclick="fillanswer('18','4',this)">
+     <input type="button" class="option" id="182b"  value="VeryGood" onclick="fillanswer('18','5',this)">
+     <input type="button" class="option" id="183b"  value="Good" onclick="fillanswer('18','3',this)">
+     <input type="button" class="option" id="184b"  value="Satisfaction" onclick="fillanswer('18','2',this)">
+     <input type="button" class="option" id="185b"  value="Poor" onclick="fillanswer('18','1',this)"> <br>
+
+     <p>19. Teacher's making of answer scripts is fair and impartial</p>
+     <input type="button" class="option" id="191b"  value="Excellent" onclick="fillanswer('19','4',this)">
+     <input type="button" class="option" id="192b"  value="VeryGood" onclick="fillanswer('19','5',this)">
+     <input type="button" class="option" id="193b"  value="Good" onclick="fillanswer('19','3',this)">
+     <input type="button" class="option" id="194b"  value="Satisfaction" onclick="fillanswer('19','2',this)">
+     <input type="button" class="option" id="195b"  value="Poor" onclick="fillanswer('19','1',this)"> <br>
+
+     <p>20. Teacher is prompt in valuating and returing the answer scripts provising feedback on performance</p>
+     <input type="button" class="option" id="201b"  value="Excellent" onclick="fillanswer('20','4',this)">
+     <input type="button" class="option" id="202b"  value="VeryGood" onclick="fillanswer('20','5',this)">
+     <input type="button" class="option" id="203b"  value="Good" onclick="fillanswer('20','3',this)">
+     <input type="button" class="option" id="204b"  value="Satisfaction" onclick="fillanswer('20','2',this)">
+     <input type="button" class="option" id="205b"  value="Poor" onclick="fillanswer('20','1',this)"> <br>
+    
+
+      <br><br><br>   
+     <input class="open1" style="text-align: center;" type="button" onclick="subcall(0)" value="RETURN">
+     </div>
+  
+
+
+
+
+
+     <form style="display: none;" onsubmit="return submitfun()" id="mainform" action="https://stark-anchorage-19293.herokuapp.com/" method="get" >
+
+       <input type="text" name="Username" id="Username" value="" style="display: none;">
+       <input type="number" name="Year" id="Year" value="" style="display: none;"> 
+       <input type="text" name="selective" id="selective" style="display: none;">
+       
+       <input type="text" name="sub1ans1" id="sub1ans1" value="" style="display: none;"> 
+       <input type="text" name="sub1ans2" id="sub1ans2" value="" style="display: none;"> 
+       <input type="text" name="sub1ans3" id="sub1ans3" value="" style="display: none;"> 
+       <input type="text" name="sub1ans4" id="sub1ans4" value="" style="display: none;">
+       <input type="text" name="sub1ans5" id="sub1ans5" value="" style="display: none;"> 
+       <input type="text" name="sub1ans6" id="sub1ans6" value="" style="display: none;">
+       <input type="text" name="sub1ans7" id="sub1ans7" value="" style="display: none;"> 
+       <input type="text" name="sub1ans8" id="sub1ans8" value="" style="display: none;">
+       <input type="text" name="sub1ans9" id="sub1ans9" value="" style="display: none;"> 
+       <input type="text" name="sub1ans10" id="sub1ans10" value="" style="display: none;">
+       <input type="text" name="sub1ans11" id="sub1ans11" value="" style="display: none;"> 
+       <input type="text" name="sub1ans12" id="sub1ans12" value="" style="display: none;"> 
+       <input type="text" name="sub1ans13" id="sub1ans13" value="" style="display: none;"> 
+       <input type="text" name="sub1ans14" id="sub1ans14" value="" style="display: none;">
+       <input type="text" name="sub1ans15" id="sub1ans15" value="" style="display: none;"> 
+       <input type="text" name="sub1ans16" id="sub1ans16" value="" style="display: none;">
+       <input type="text" name="sub1ans17" id="sub1ans17" value="" style="display: none;"> 
+       <input type="text" name="sub1ans18" id="sub1ans18" value="" style="display: none;">
+       <input type="text" name="sub1ans19" id="sub1ans19" value="" style="display: none;"> 
+       <input type="text" name="sub1ans20" id="sub1ans20" value="" style="display: none;">
+
+
+       <input type="text" name="sub2ans1" id="sub2ans1" value="" style="display: none;"> 
+       <input type="text" name="sub2ans2" id="sub2ans2" value="" style="display: none;"> 
+       <input type="text" name="sub2ans3" id="sub2ans3" value="" style="display: none;"> 
+       <input type="text" name="sub2ans4" id="sub2ans4" value="" style="display: none;">
+       <input type="text" name="sub2ans5" id="sub2ans5" value="" style="display: none;"> 
+       <input type="text" name="sub2ans6" id="sub2ans6" value="" style="display: none;">
+       <input type="text" name="sub2ans7" id="sub2ans7" value="" style="display: none;"> 
+       <input type="text" name="sub2ans8" id="sub2ans8" value="" style="display: none;">
+       <input type="text" name="sub2ans9" id="sub2ans9" value="" style="display: none;"> 
+       <input type="text" name="sub2ans10" id="sub2ans10" value="" style="display: none;">
+       <input type="text" name="sub2ans11" id="sub2ans11" value="" style="display: none;"> 
+       <input type="text" name="sub2ans12" id="sub2ans12" value="" style="display: none;"> 
+       <input type="text" name="sub2ans13" id="sub2ans13" value="" style="display: none;"> 
+       <input type="text" name="sub2ans14" id="sub2ans14" value="" style="display: none;">
+       <input type="text" name="sub2ans15" id="sub2ans15" value="" style="display: none;"> 
+       <input type="text" name="sub2ans16" id="sub2ans16" value="" style="display: none;">
+       <input type="text" name="sub2ans17" id="sub2ans17" value="" style="display: none;"> 
+       <input type="text" name="sub2ans18" id="sub2ans18" value="" style="display: none;">
+       <input type="text" name="sub2ans19" id="sub2ans19" value="" style="display: none;"> 
+       <input type="text" name="sub2ans20" id="sub2ans20" value="" style="display: none;">
+
+
+       <input type="text" name="sub3ans1" id="sub3ans1" value="" style="display: none;"> 
+       <input type="text" name="sub3ans2" id="sub3ans2" value="" style="display: none;"> 
+       <input type="text" name="sub3ans3" id="sub3ans3" value="" style="display: none;"> 
+       <input type="text" name="sub3ans4" id="sub3ans4" value="" style="display: none;">
+       <input type="text" name="sub3ans5" id="sub3ans5" value="" style="display: none;"> 
+       <input type="text" name="sub3ans6" id="sub3ans6" value="" style="display: none;">
+       <input type="text" name="sub3ans7" id="sub3ans7" value="" style="display: none;"> 
+       <input type="text" name="sub3ans8" id="sub3ans8" value="" style="display: none;">
+       <input type="text" name="sub3ans9" id="sub3ans9" value="" style="display: none;"> 
+       <input type="text" name="sub3ans10" id="sub3ans10" value="" style="display: none;">
+       <input type="text" name="sub3ans11" id="sub3ans11" value="" style="display: none;"> 
+       <input type="text" name="sub3ans12" id="sub3ans12" value="" style="display: none;"> 
+       <input type="text" name="sub3ans13" id="sub3ans13" value="" style="display: none;"> 
+       <input type="text" name="sub3ans14" id="sub3ans14" value="" style="display: none;">
+       <input type="text" name="sub3ans15" id="sub3ans15" value="" style="display: none;"> 
+       <input type="text" name="sub3ans16" id="sub3ans16" value="" style="display: none;">
+       <input type="text" name="sub3ans17" id="sub3ans17" value="" style="display: none;"> 
+       <input type="text" name="sub3ans18" id="sub3ans18" value="" style="display: none;">
+       <input type="text" name="sub3ans19" id="sub3ans19" value="" style="display: none;"> 
+       <input type="text" name="sub3ans20" id="sub3ans20" value="" style="display: none;">
+
+
+
+       <input type="text" name="sub4ans1" id="sub4ans1" value="" style="display: none;"> 
+       <input type="text" name="sub4ans2" id="sub4ans2" value="" style="display: none;"> 
+       <input type="text" name="sub4ans3" id="sub4ans3" value="" style="display: none;"> 
+       <input type="text" name="sub4ans4" id="sub4ans4" value="" style="display: none;">
+       <input type="text" name="sub4ans5" id="sub4ans5" value="" style="display: none;"> 
+       <input type="text" name="sub4ans6" id="sub4ans6" value="" style="display: none;">
+       <input type="text" name="sub4ans7" id="sub4ans7" value="" style="display: none;"> 
+       <input type="text" name="sub4ans8" id="sub4ans8" value="" style="display: none;">
+       <input type="text" name="sub4ans9" id="sub4ans9" value="" style="display: none;"> 
+       <input type="text" name="sub4ans10" id="sub4ans10" value="" style="display: none;">
+       <input type="text" name="sub4ans11" id="sub4ans11" value="" style="display: none;"> 
+       <input type="text" name="sub4ans12" id="sub4ans12" value="" style="display: none;"> 
+       <input type="text" name="sub4ans13" id="sub4ans13" value="" style="display: none;"> 
+       <input type="text" name="sub4ans14" id="sub4ans14" value="" style="display: none;">
+       <input type="text" name="sub4ans15" id="sub4ans15" value="" style="display: none;"> 
+       <input type="text" name="sub4ans16" id="sub4ans16" value="" style="display: none;">
+       <input type="text" name="sub4ans17" id="sub4ans17" value="" style="display: none;"> 
+       <input type="text" name="sub4ans18" id="sub4ans18" value="" style="display: none;">
+       <input type="text" name="sub4ans19" id="sub4ans19" value="" style="display: none;"> 
+       <input type="text" name="sub4ans20" id="sub4ans20" value="" style="display: none;">
+
+
+
+       <input type="text" name="sub5ans1" id="sub5ans1" value="" style="display: none;"> 
+       <input type="text" name="sub5ans2" id="sub5ans2" value="" style="display: none;"> 
+       <input type="text" name="sub5ans3" id="sub5ans3" value="" style="display: none;"> 
+       <input type="text" name="sub5ans4" id="sub5ans4" value="" style="display: none;">
+       <input type="text" name="sub5ans5" id="sub5ans5" value="" style="display: none;"> 
+       <input type="text" name="sub5ans6" id="sub5ans6" value="" style="display: none;">
+       <input type="text" name="sub5ans7" id="sub5ans7" value="" style="display: none;"> 
+       <input type="text" name="sub5ans8" id="sub5ans8" value="" style="display: none;">
+       <input type="text" name="sub5ans9" id="sub5ans9" value="" style="display: none;"> 
+       <input type="text" name="sub5ans10" id="sub5ans10" value="" style="display: none;">
+       <input type="text" name="sub5ans11" id="sub5ans11" value="" style="display: none;"> 
+       <input type="text" name="sub5ans12" id="sub5ans12" value="" style="display: none;"> 
+       <input type="text" name="sub5ans13" id="sub5ans13" value="" style="display: none;"> 
+       <input type="text" name="sub5ans14" id="sub5ans14" value="" style="display: none;">
+       <input type="text" name="sub5ans15" id="sub5ans15" value="" style="display: none;"> 
+       <input type="text" name="sub5ans16" id="sub5ans16" value="" style="display: none;">
+       <input type="text" name="sub5ans17" id="sub5ans17" value="" style="display: none;"> 
+       <input type="text" name="sub5ans18" id="sub5ans18" value="" style="display: none;">
+       <input type="text" name="sub5ans19" id="sub5ans19" value="" style="display: none;"> 
+       <input type="text" name="sub5ans20" id="sub5ans20" value="" style="display: none;">
+
+
+
+       <input type="text" name="sub6ans1" id="sub6ans1" value="" style="display: none;"> 
+       <input type="text" name="sub6ans2" id="sub6ans2" value="" style="display: none;"> 
+       <input type="text" name="sub6ans3" id="sub6ans3" value="" style="display: none;"> 
+       <input type="text" name="sub6ans4" id="sub6ans4" value="" style="display: none;">
+       <input type="text" name="sub6ans5" id="sub6ans5" value="" style="display: none;"> 
+       <input type="text" name="sub6ans6" id="sub6ans6" value="" style="display: none;">
+       <input type="text" name="sub6ans7" id="sub6ans7" value="" style="display: none;"> 
+       <input type="text" name="sub6ans8" id="sub6ans8" value="" style="display: none;">
+       <input type="text" name="sub6ans9" id="sub6ans9" value="" style="display: none;"> 
+       <input type="text" name="sub6ans10" id="sub6ans10" value="" style="display: none;">
+       <input type="text" name="sub6ans11" id="sub6ans11" value="" style="display: none;"> 
+       <input type="text" name="sub6ans12" id="sub6ans12" value="" style="display: none;"> 
+       <input type="text" name="sub6ans13" id="sub6ans13" value="" style="display: none;"> 
+       <input type="text" name="sub6ans14" id="sub6ans14" value="" style="display: none;">
+       <input type="text" name="sub6ans15" id="sub6ans15" value="" style="display: none;"> 
+       <input type="text" name="sub6ans16" id="sub6ans16" value="" style="display: none;">
+       <input type="text" name="sub6ans17" id="sub6ans17" value="" style="display: none;"> 
+       <input type="text" name="sub6ans18" id="sub6ans18" value="" style="display: none;">
+       <input type="text" name="sub6ans19" id="sub6ans19" value="" style="display: none;"> 
+       <input type="text" name="sub6ans20" id="sub6ans20" value="" style="display: none;">
+
+
+       <input type="text" name="V1" id="V1" value=""  style="display: none;">
+       <input type="text" name="E1" id="E1" value=""  style="display: none;">
+       <input type="text" name="G1" id="G1" value=""  style="display: none;">
+       <input type="text" name="S1" id="S1" value=""  style="display: none;">
+       <input type="text" name="P1" id="P1" value=""  style="display: none;">
+
+
+       <input type="text" name="V2" id="V2" value=""  style="display: none;">
+       <input type="text" name="E2" id="E2" value=""  style="display: none;">
+       <input type="text" name="G2" id="G2" value=""  style="display: none;">
+       <input type="text" name="S2" id="S2" value=""  style="display: none;">
+       <input type="text" name="P2" id="P2" value=""  style="display: none;">
+
+       <input type="text" name="V3" id="V3" value=""  style="display: none;">
+       <input type="text" name="E3" id="E3" value=""  style="display: none;">
+       <input type="text" name="G3" id="G3" value=""  style="display: none;">
+       <input type="text" name="S3" id="S3" value=""  style="display: none;">
+       <input type="text" name="P3" id="P3" value=""  style="display: none;">
+
+       <input type="text" name="V4" id="V4" value=""  style="display: none;">
+       <input type="text" name="E4" id="E4" value=""  style="display: none;">
+       <input type="text" name="G4" id="G4" value=""  style="display: none;">
+       <input type="text" name="S4" id="S4" value=""  style="display: none;">
+       <input type="text" name="P4" id="P4" value=""  style="display: none;">
+
+       <input type="text" name="V5" id="V5" value=""  style="display: none;">
+       <input type="text" name="E5" id="E5" value=""  style="display: none;">
+       <input type="text" name="G5" id="G5" value=""  style="display: none;">
+       <input type="text" name="S5" id="S5" value=""  style="display: none;">
+       <input type="text" name="P5" id="P5" value=""  style="display: none;">
+
+       <input type="text" name="V6" id="V6" value=""  style="display: none;">
+       <input type="text" name="E6" id="E6" value=""  style="display: none;">
+       <input type="text" name="G6" id="G6" value=""  style="display: none;">
+       <input type="text" name="S6" id="S6" value=""  style="display: none;">
+       <input type="text" name="P6" id="P6" value=""  style="display: none;">
+        
+
+       <br><br>
+     <input type="submit"  id="submit" style="display: block;" value="SUBMIT">
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Tools Explorer</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style  >
+    body{
+        background-color: yellow;
+        display: flex;
+    
+        flex-wrap: wrap;
+        justify-content : space-around;
+        font-family: sans-serif;
+    }
+    #topic{
+        background-color: white; text-align: center;
+        width: 680px;
+        height: 60px;
+        padding: 50px;
+        margin-top: 30px ;
+        border-radius: 10px;
+        font-size: 25px;
+        filter: drop-shadow(12px 12px 10px);
+        box-shadow: inset(10px 10px 10px 10px) black;
+        
+    }
+    .div{
+        filter: drop-shadow(12px 12px 10px);
+        background-color: white;
+        width: 500px;
+        height: 200px;
+        padding: 30px;
+        margin-top: 200px;
+        margin-bottom: 50px;
+        border-radius: 10px;
+    }
+    .div:hover{
+
+        filter: drop-shadow(12px 18px 15px);
+    }
+    p{
+        font-size: 20px; font-weight: bold;
+    }
+    .text{
+        width: 350px;
+        height: 20px;
+        border-radius: 4px;
+    }
+    #company{
+        
+        width: 200px;
+        height: 30px;
+        background-color: white;
+    }
+
+    </style>
+
+</head>
+<body>
+    
+   
+    <div id="topic">
+        <center> <div id="company">
+        <input type="text" value="Z" style="font-size:22px;background-color: red;color:white;width: 20px;height: 20px;border-radius: 2px;font-weight:bold;">
+        <input type="text" value="O" style="font-size:22px;background-color: rgb(19, 209, 12);color:white;width: 20px;height: 20px;border-radius: 2px;font-weight:bold;">
+        <input type="text" value="H" style="font-size:22px;background-color: rgb(0, 60, 255);color:white;width: 20px;height: 20px;border-radius: 2px;font-weight:bold;">
+        <input type="text" value="O" style="font-size:22px;background-color: rgb(255, 251, 0);color:white;width: 20px;height: 20px;border-radius: 2px;font-weight:bold;">
+        </div></center><br>   
+        !Welcome to the URL Tools Explorer... </div>
+
+    <div class="div">
+
+
+        <center> <p>URL Informations viewer</p> </center>
+         
+        <form action="http://localhost:8080/Main1/UrlInfo" method="get">
+           <b> URL: </b><input type="text" name="url" class="text" placeholder="Ex. https://www.zohocorp.com/">  <br>
+            
+            <br>
+            This section provides the URL infomations like <br>
+            <li>   HTTP version <br>   </li>
+            <li>    TLS version <br>   </li>
+            <li>  Response code   </li>
+          
+        <center><input type="submit" class="submit" value="CLICK"></center>    
+        </form>
+
+
+    </div>
+
+    <div class="div">
+   
+        <center> <p>Finding IP address of Domain name</p> </center>
+        <form action="http://localhost:8080/Main1/IPFinder" method="get">
+            <b> DOMAIN: </b><input type="text" name="url" class="text" placeholder="Ex. www.google.com">  <br>
+
+           <br> Enter the domain in the box and find the IP address for the given domain name
+            
+
+            <center><input type="submit" class="submit" value="CLICK"></center>    
+        </form>
+
+    </div>
+  
+    <div class="div">
+
+        <center> <p>latency test for Domain name</p> </center>
+        <form action="http://localhost:8080/Main1/latency" method="get">
+           <b> DOMAIN: </b><input type="text" name="url" class="text" placeholder="Ex. www.google.com">  <br>
+            <br>
+            latency is the measure of the time difference to access the content from the given domain 
+            <center><input type="submit" class="submit" value="CLICK"></center>    
+        </form>
+        
+    </div>
+
+    <div class="div">
+
+        <center> <p>Downloading image from given URL</p> </center>
+        <form action="http://localhost:8080/Main1/ImageCopy" method="get">
+            <b> URL: </b><input type="text" name="url" class="text"  placeholder="Ex. https://images.freeimages.com/images/large-previews/a58/sunsets-1230787.jpg" >  <br>
+            <br>
+            After Entering the URL and clicking the button the requested image will be downloaded
+           
+            <center><input type="submit" class="submit" value="CLICK"></center>    
+        </form>
+        
+      
+    </div>
+</body>
+</html>
